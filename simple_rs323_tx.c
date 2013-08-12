@@ -93,7 +93,7 @@ int main(void)
 			_delay_ms(50);
 		}
 		
-		char String1[]="Going right!";
+		String1[]="Going right!";
 		SendString(String1);
 		
 		a = 0b10000000;
