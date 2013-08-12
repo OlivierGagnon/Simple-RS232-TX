@@ -78,11 +78,13 @@ void SendCR(void)
 int main(void)
 {
 	TXInit();
+	char *String = malloc(256); //allocate some memory for a string variable
 	
 	while(1)
     {
-		char String1[]="Going left!";
-		SendString(String1);
+		strcpy(String, "Some strings.");
+		SendString(String);
+		
 		int a;
 		a = 0b00000001;
 		int i;
@@ -92,10 +94,6 @@ int main(void)
 			a <<= 1;
 			_delay_ms(50);
 		}
-		
-		String1[]="Going right!";
-		SendString(String1);
-		
 		a = 0b10000000;
 		for (i=0;i<8;i++)
 		{
